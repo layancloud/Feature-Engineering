@@ -10,12 +10,14 @@ Top_k = 5: Accuracy was 39.26%.
 Top_k = 6: Accuracy was 39.08%.
 Conclusion: According to the above data, the most optimal top_k parameter for our case should be 3. With only 3 elements in the category (Item_Name), we got rid of the rare objects that confused the algorithm.
 2. Features importance
-Based on the analysis above, there were changes in the significance of the features:
+This is how the model sorted out the factors by their importance in all runs:
 
-Significant factors: Just like earlier observed, Unit_Price and Quantity are significant for predicting the target class in all scenarios.
+Top factors: Unit_Price and Quantity are the top features in each of the experiments conducted. They played an important role in almost all decisions taken by the model.
 
 Impact on Item_Name_reduced:
 
-For top_k=3: The factor "Item Name" can be considered significant as well because despite being a very simple factor, it achieves high accuracy.
+top_k=3: The model was able to obtain maximum accuracy using this feature because it used very few labels. Thus, we see how simplicity is more valuable than complexity.
 
-For top_k=10: In contrast to the scenario top_k=3, the model has more defined labels. However, the accuracy in this scenario is lower compared to top_k=3.
+In the cases top_k=10&6, the model had to consider names more carefully than before, but due to poor accuracy, we see how these additional details were a hindrance rather than assistance.
+
+For top_k=5, the feature remained among the top three features and formed an integral part of predictions made by the model.
