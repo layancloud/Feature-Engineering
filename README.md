@@ -1,16 +1,14 @@
 # Feature-Engineering
 1. Accuracy  
-Our review of the correct data reveals an unexpected yet interesting pattern: the accuracy does not improve as the number of categories increases. In fact, it is highest with the fewest categories.  
+Comparing different values of top_k (3, 5, 6) against the base top_k=10 showed that increasing the number of categories resulted in poorer outcomes for the algorithm.
+Top_k = 3: The most accurate result was 40.18%.
 
-Top_k = 3: Accuracy of 40.18%.
+Baseline (top_k = 10): Accuracy was 39.36%.
 
-Baseline (top_k = 10): 39.36% Accuracy.
+Top_k = 5: Accuracy was 39.26%.
 
-Top_k = 5: 39.26% Accuracy.
-
-Top_k = 6: Lowest Accuracy was of 39.08%.
-
-Conclusion: It is important to note that reducing the number of item categories to only the top three increased the accuracy of the model.This suggests that adding more item names, from 4 to 10, may have confused or distracted the Random Forest model.This suggests that adding more item names, from 4 to 10, may have confused or distracted the Random Forest model.
+Top_k = 6: Accuracy was 39.08%.
+Conclusion: According to the above data, the most optimal top_k parameter for our case should be 3. With only 3 elements in the category (Item_Name), we got rid of the rare objects that confused the algorithm.
 2. Features importance
 Based on the analysis above, there were changes in the significance of the features:
 
