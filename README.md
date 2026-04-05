@@ -9,6 +9,7 @@ Top_k = 5: Accuracy was 39.26%.
 
 Top_k = 6: Accuracy was 39.08%.
 Conclusion: According to the above data, the most optimal top_k parameter for our case should be 3. With only 3 elements in the category (Item_Name), we got rid of the rare objects that confused the algorithm.
+
 2. Features importance
 This is how the model sorted out the factors by their importance in all runs:
 
